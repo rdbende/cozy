@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 
 import pytest
 
@@ -10,6 +11,8 @@ gi.require_version('Gdk', '4.0')
 gi.require_version('Adw', '1')
 gi.require_version('Gst', '1.0')
 gi.require_version('GstPbutils', '1.0')
+
+print(sys.path, sys.modules)
 
 
 @pytest.fixture(scope='session', autouse=True)
